@@ -1,7 +1,7 @@
 import './App.css'
 import escudo from './images/escudo.jpg'
 function App() {
-  
+ const tareas =['tarea1', 'tarea2', 'tarea3']
   return (
   <>
     <div class='header'>
@@ -13,16 +13,10 @@ function App() {
       <button class='butti'>Nueva Tarea</button>
     </div>
     <div class='centrar'>
-    <ul class='tareas'>
-        <li>
-          tarea 1
-        </li>
-        <li>
-          tarea 2
-        </li>
-        <li>
-          tarea 3
-        </li>
+      <ul class='tareas'>
+        {tareas.map((value, index)=>(
+          <li key={index}>{value}</li>
+        ))}
       </ul>
     </div>
 
